@@ -7,14 +7,14 @@ redirect_from:
   - /about.html
 ---
 
-I am an undergraduate student at Korea University. My current research interests include AI safety, reinforcement learning, and machine learning systems.
+I am an undergraduate student at Korea University. My research interests focus on developing AI systems that are beneficial and understandable to people, including AI safety, interpretable AI, and reinforcement learning.
 
 ## Research Interests
 
-- Artificial Intelligence Safety
-- Machine Learning
-- Reinforcement Learning
-- Natural Language Processing
+- Beneficial AI: Developing AI systems that genuinely help people
+- Interpretable AI: Understanding and explaining how AI systems work
+- AI Safety and Alignment
+- Reinforcement Learning from Human Feedback
 
 ## Education
 
