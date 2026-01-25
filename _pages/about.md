@@ -59,7 +59,7 @@ redirect_from:
     <a class="home-tabs__link" href="#education">Education</a>
     <a class="home-tabs__link" href="#projects">Projects</a>
     <a class="home-tabs__link" href="#awards">Awards and Honors</a>
-    <a class="home-tabs__link" href="{{ site.baseurl }}/cv/">CV</a>
+    <span class="home-tabs__link is-disabled" aria-disabled="true">CV</span>
   </nav>
 
   <section id="education" class="home-section" style="--i:2">
