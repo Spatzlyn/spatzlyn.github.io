@@ -1,3 +1,44 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js?v={{ site.github.build_revision | default: site.time | date: '%s' }}"></script>
 
+<script>
+  (function () {
+    function setupHomeTabsScroll() {
+      if (!window.jQuery) {
+        return;
+      }
+      var $links = jQuery('.home-tabs__link[href^="#"]');
+      if (!$links.length) {
+        return;
+      }
+      $links.off('click.smoothscroll');
+      $links.on('click.homeTabsScroll', function (event) {
+        var targetId = jQuery(this).attr('href');
+        if (!targetId || targetId.charAt(0) !== '#') {
+          return;
+        }
+        var $target = jQuery(targetId);
+        if (!$target.length) {
+          return;
+        }
+        event.preventDefault();
+        var $nav = jQuery('.home-tabs');
+        var offset = $nav.length ? $nav.outerHeight() + 48 : 88;
+        var top = Math.max($target.offset().top - offset, 0);
+        jQuery('html, body').stop().animate({ scrollTop: top }, 200);
+        if (history && history.replaceState) {
+          history.replaceState(null, '', targetId);
+        } else {
+          window.location.hash = targetId;
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupHomeTabsScroll);
+    } else {
+      setupHomeTabsScroll();
+    }
+  })();
+</script>
+
 {% include analytics.html %}
