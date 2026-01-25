@@ -1,22 +1,86 @@
 ---
 permalink: /
 title: "About"
-author_profile: true
+layout: splash
+author_profile: false
 redirect_from:
   - /about/
   - /about.html
 ---
 
-I am an undergraduate student at Korea University. My research interests focus on developing AI systems that are beneficial and understandable to people, including AI safety, interpretable AI, and reinforcement learning.
+{% assign home_avatar = site.author.avatar | default: "profile.png" %}
+{% assign home_name = site.author.name | default: site.title %}
+{% assign home_email = site.author.email %}
+{% assign home_linkedin = site.author.linkedin %}
+{% assign home_orcid = site.author.orcid %}
+{% assign home_github = site.author.github %}
 
-## Research Interests
+<div class="home-landing">
+  <section class="home-hero" style="--i:0">
+    <div class="home-hero__media">
+      <div class="home-hero__photo">
+        <img class="home-hero__image" src="{{ site.baseurl }}/images/{{ home_avatar }}" alt="{{ home_name }}">
+      </div>
+      <div class="home-hero__contact">
+        <h2>Contact</h2>
+        <ul>
+          {% if home_email %}
+          <li><a href="mailto:{{ home_email }}">{{ home_email }}</a></li>
+          {% endif %}
+          {% if home_github %}
+          <li><a href="https://github.com/{{ home_github }}">GitHub</a></li>
+          {% endif %}
+          {% if home_linkedin %}
+            {% if home_linkedin contains "http" %}
+            <li><a href="{{ home_linkedin }}">LinkedIn</a></li>
+            {% else %}
+            <li><a href="https://{{ home_linkedin }}">LinkedIn</a></li>
+            {% endif %}
+          {% endif %}
+          {% if home_orcid %}
+          <li><a href="{{ home_orcid }}">ORCID</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    <div class="home-hero__content">
+      <h1>{{ home_name }}</h1>
+      <p>I am an undergraduate student in Computer Science at Korea University. I have broad interests in machine learning, including interpretable AI, multimodal learning, and embodied AI. I am passionate about developing AI systems that can genuinely help people.</p>
+      <div class="home-tags">
+        <span class="home-tag">Interpretable AI</span>
+        <span class="home-tag">Multimodal Learning</span>
+        <span class="home-tag">Embodied AI</span>
+        <span class="home-tag">AI Safety</span>
+      </div>
+    </div>
+  </section>
 
-- Beneficial AI: Developing AI systems that genuinely help people
-- Interpretable AI: Understanding and explaining how AI systems work
-- AI Safety and Alignment
-- Reinforcement Learning from Human Feedback
+  <nav class="home-tabs" style="--i:1">
+    <a class="home-tabs__link" href="#education">Education</a>
+    <a class="home-tabs__link" href="#projects">Projects</a>
+    <a class="home-tabs__link" href="#awards">Awards and Honors</a>
+    <a class="home-tabs__link" href="{{ site.baseurl }}/cv/">CV</a>
+  </nav>
 
-## Education
+  <section id="education" class="home-section" style="--i:2">
+    <h2>Education</h2>
+    <div class="home-section__card">
+      <h3>Korea University - Undergraduate Student</h3>
+      <p>B.S. in Computer Science (in progress)</p>
+    </div>
+  </section>
 
-- **Korea University** - Undergraduate Student
-  - Currently pursuing Bachelor's degree
+  <section id="projects" class="home-section" style="--i:3">
+    <h2>Projects</h2>
+    <div class="home-section__card">
+      <p>Add your research or course projects here. Keep each entry concise with a one-line focus and a link.</p>
+    </div>
+  </section>
+
+  <section id="awards" class="home-section" style="--i:4">
+    <h2>Awards and Honors</h2>
+    <div class="home-section__card">
+      <p>List scholarships, fellowships, or competition awards here.</p>
+    </div>
+  </section>
+</div>
