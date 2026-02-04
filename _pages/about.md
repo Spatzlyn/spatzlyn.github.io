@@ -82,7 +82,7 @@ redirect_from:
     <div class="home-section__card">
       <ul>
         <li><strong>National Science and Engineering Undergraduate Scholarship</strong> &mdash; Korea Student Aid Foundation &middot; 25.05~</li>
-        <li><strong>Samsung Collegiate Programming Challenge 2025 (AI), 1st place</strong> &mdash; Samsung Electronics Co., Ltd. &middot; 2025.08</li>
+        <li><strong>Samsung Collegiate Programming Challenge 2025 (AI), 1st place</strong> &mdash; Samsung Electronics Co., Ltd. &middot; 25.08</li>
       </ul>
     </div>
   </section>
