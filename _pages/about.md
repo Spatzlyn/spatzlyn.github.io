@@ -65,7 +65,7 @@ redirect_from:
   <section id="education" class="home-section" style="--i:2">
     <h2>Education</h2>
     <div class="home-section__card">
-      <h3>Korea University - Undergraduate Student <span class="home-section__dates">23.03~</span></h3>
+      <h3>Korea University - Undergraduate Student <span class="home-section__dates">(23.03~)</span></h3>
       <p>B.S. in Computer Science (in progress)</p>
     </div>
   </section>
@@ -81,8 +81,8 @@ redirect_from:
     <h2>Awards and Honors</h2>
     <div class="home-section__card">
       <ul>
-        <li><strong>국가 이공계 장학생</strong> &mdash; (Add a one-line description here.)</li>
-        <li><strong>Samsung SCPC AI Challenge, 1st place</strong> &mdash; (Add a one-line description here.)</li>
+        <li><strong>National Science and Engineering Undergraduate Scholarship</strong> &mdash; Korea Student Aid Foundation &middot; 25.05~</li>
+        <li><strong>Samsung Collegiate Programming Challenge 2025 (AI), 1st place</strong> &mdash; Samsung Electronics Co., Ltd. &middot; 2025.08</li>
       </ul>
     </div>
   </section>
