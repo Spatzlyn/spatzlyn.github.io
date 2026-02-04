@@ -82,7 +82,7 @@ redirect_from:
     <div class="home-section__card">
       <ul>
         <li><strong>National Science and Engineering Undergraduate Scholarship</strong> &mdash; Korea Student Aid Foundation &middot; 25.05~</li>
-        <li><strong>Samsung Collegiate Programming Challenge 2025 (AI), 1st place</strong> &mdash; Samsung Electronics Co., Ltd. &middot; 25.08</li>
+        <li><strong>Samsung Collegiate Programming Challenge 2025 (AI), 1st place</strong> &mdash; Samsung Electronics Co., Ltd. &middot; 25.08 &middot; <a class="home-award__link" href="https://research.samsung.com/news/Samsung-Electronics-Unveils-Winners-of-11th-Collegiate-Programming-Challenge-as-Part-of-AI-Talent-Discovery-Initiative" target="_blank" rel="noopener noreferrer"><i class="fa fa-paperclip" aria-hidden="true"></i> Link</a></li>
       </ul>
     </div>
   </section>
