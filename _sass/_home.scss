@@ -91,6 +91,10 @@ body {
   object-fit: cover;
 }
 
+.home-hero__contact {
+  margin-top: 15px; // 더 내리고 싶으면 숫자 키우기
+}
+
 .home-hero__contact h2 {
   font-family: var(--home-font-display);
   font-size: 0.95rem;
@@ -105,7 +109,7 @@ body {
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 8px;
+  gap: 5px;
   font-size: 0.95rem;
 }
 
