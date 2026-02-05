@@ -45,12 +45,15 @@ redirect_from:
     </div>
     <div class="home-hero__content">
       <h1>{{ home_name }}</h1>
-      <p>I am an undergraduate student in Computer Science at Korea University. I have broad interests in machine learning, including interpretable AI, multimodal learning, and embodied AI. I am passionate about developing AI systems that can genuinely help people.</p>
+      <p>I am an undergraduate student in Computer Science at Korea University. I am interested in how AI systems learn to understand the world — how they perceive, reason, and act in complex environments.</p>
+      <p>My research focuses on embodied AI, multimodal learning, and trustworthy AI. I want to build AI that knows when it might be wrong, learns from multiple senses beyond just text, and is reliable enough to actually help people in their everyday lives.</p>
+      <p>I care deeply about building AI that is both technically strong and genuinely useful. Pushing the boundaries of what AI can do excites me — but I also believe that technical progress should go hand in hand with thinking about its impact on people. I want to be a researcher who not only advances the field, but also takes responsibility for how their work shapes the world.</p>
       <div class="home-tags">
-        <span class="home-tag">Interpretable AI</span>
-        <span class="home-tag">Multimodal Learning</span>
         <span class="home-tag">Embodied AI</span>
-        <span class="home-tag">AI Safety</span>
+        <span class="home-tag">Multimodal Learning</span>
+        <span class="home-tag">Trustworthy AI</span>
+        <span class="home-tag">World Models</span>
+        <span class="home-tag">AI Reasoning</span>
       </div>
     </div>
   </section>
