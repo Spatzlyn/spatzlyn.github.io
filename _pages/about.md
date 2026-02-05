@@ -60,7 +60,11 @@ redirect_from:
 
   <nav class="home-tabs" style="--i:1">
     <a class="home-tabs__link" href="#education">Education</a>
+    {% if site.home_show_projects %}
     <a class="home-tabs__link" href="#projects">Projects</a>
+    {% else %}
+    <span class="home-tabs__link is-disabled" aria-disabled="true">Projects</span>
+    {% endif %}
     <a class="home-tabs__link" href="#awards">Awards and Honors</a>
     <span class="home-tabs__link is-disabled" aria-disabled="true">CV</span>
   </nav>
@@ -73,12 +77,14 @@ redirect_from:
     </div>
   </section>
 
+  {% if site.home_show_projects %}
   <section id="projects" class="home-section" style="--i:3">
     <h2>Projects</h2>
     <div class="home-section__card">
       <p>Add your research or course projects here. Keep each entry concise with a one-line focus and a link.</p>
     </div>
   </section>
+  {% endif %}
 
   <section id="awards" class="home-section" style="--i:4">
     <h2>Awards and Honors</h2>

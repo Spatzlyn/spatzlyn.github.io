@@ -18,6 +18,9 @@ url                      : https://spatzlyn.github.io # The base hostname & prot
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Spatzlyn/spatzlyn.github.io"
 
+# Homepage sections
+home_show_projects       : false # show the Projects tab/section on the homepage
+
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
