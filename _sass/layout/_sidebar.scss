@@ -25,7 +25,7 @@
   }
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    @include span(3 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -36,7 +36,7 @@
   }
 
   @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
+    max-width: 360px;
     padding-right: 0;
   }
 
@@ -51,8 +51,8 @@
 
   p, li {
     font-family: $sans-serif;
-    font-size: $type-size-6;
-    line-height: 1.5;
+    font-size: $type-size-7;
+    line-height: 1.4;
   }
 
   img {
