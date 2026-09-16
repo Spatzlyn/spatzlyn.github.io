@@ -260,6 +260,22 @@ body {
   margin-top: 10px;
 }
 
+.home-award__link {
+  color: var(--home-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.home-award__link:hover,
+.home-award__link:focus {
+  border-bottom-color: currentColor;
+}
+
+.home-award__link .fa {
+  margin-right: 6px;
+}
+
 @keyframes homeFadeUp {
   from {
     opacity: 0;
