@@ -1,16 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;500;600&family=Sora:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Roboto+Slab:wght@300;400;600;700&display=swap");
 
 .home-landing {
-  --home-ink: #1f1b18;
-  --home-muted: #6d645b;
-  --home-accent: #c4592f;
-  --home-border: #ded6cc;
+  --home-ink: #1b2b2a;
+  --home-muted: #4c6a66;
+  --home-accent: #1b7f7b;
+  --home-border: #cfe9e4;
   --home-card: #ffffff;
-  --home-surface: #f7f2ec;
-  --home-shadow: rgba(31, 27, 24, 0.12);
-  font-family: "Source Serif 4", "Georgia", serif;
+  --home-surface: #ebfffc;
+  --home-shadow: rgba(27, 43, 42, 0.12);
+  --home-font-body: "Merriweather", "Georgia", serif;
+  --home-font-display: "Roboto Slab", "Georgia", serif;
+  --home-font-name: "Edu SA Hand", "Roboto Slab", "Georgia", serif;
+  font-family: var(--home-font-body);
   color: var(--home-ink);
-  background: linear-gradient(140deg, #f7f2ec 0%, #fffdf9 60%, #f2ebe3 100%);
+  background: linear-gradient(145deg, #ebfffc 0%, #f9fffe 55%, #dff5f2 100%);
   border-radius: 28px;
   padding: 48px 56px 56px;
   position: relative;
@@ -87,7 +90,7 @@
 }
 
 .home-hero__contact h2 {
-  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-family: var(--home-font-display);
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -117,7 +120,7 @@
 }
 
 .home-hero__content h1 {
-  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-family: var(--home-font-name);
   font-size: clamp(2rem, 2.6vw, 2.8rem);
   margin: 0 0 12px;
   letter-spacing: -0.02em;
@@ -139,7 +142,7 @@
 }
 
 .home-tag {
-  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-family: var(--home-font-display);
   font-size: 0.82rem;
   padding: 6px 12px;
   border-radius: 999px;
@@ -164,7 +167,7 @@
 }
 
 .home-tabs__link {
-  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-family: var(--home-font-display);
   font-size: 0.95rem;
   padding: 10px 20px;
   color: var(--home-ink);
@@ -193,7 +196,7 @@
 }
 
 .home-section h2 {
-  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-family: var(--home-font-display);
   font-size: 1.2rem;
   margin-bottom: 14px;
 }
