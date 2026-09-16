@@ -106,6 +106,7 @@ body {
   margin: 0;
   display: grid;
   gap: 8px;
+  font-size: 0.95rem;
 }
 
 .home-hero__contact a {
@@ -131,7 +132,7 @@ body {
 
 .home-hero__content p {
   margin: 0 0 18px;
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.85;
   color: var(--home-muted);
   max-width: 42rem;
@@ -146,7 +147,7 @@ body {
 
 .home-tag {
   font-family: var(--home-font-display);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   padding: 6px 12px;
   border-radius: 999px;
   border: 1px solid var(--home-border);
@@ -173,9 +174,9 @@ body {
 
 .home-tabs__link {
   font-family: var(--home-font-display);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 4px 0;
   color: var(--home-ink);
@@ -212,7 +213,7 @@ body {
 
 .home-section h2 {
   font-family: var(--home-font-display);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 14px;
 }
 
@@ -226,13 +227,14 @@ body {
 
 .home-section__card h3 {
   margin: 0 0 6px;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .home-section__card p,
 .home-section__card ul {
   margin: 0;
   color: var(--home-muted);
+  font-size: 0.95rem;
 }
 
 .home-section__card ul {
