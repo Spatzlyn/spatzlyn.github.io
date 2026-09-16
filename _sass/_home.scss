@@ -151,14 +151,16 @@
 }
 
 .home-tabs {
-  margin-top: 30px;
-  display: inline-flex;
+  margin-top: 34px;
+  display: flex;
   flex-wrap: wrap;
-  border: 1px solid var(--home-border);
-  border-radius: 999px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 10px 30px rgba(31, 27, 24, 0.08);
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid var(--home-border);
+  border-bottom: 1px solid var(--home-border);
+  padding: 12px 0;
+  background: transparent;
   position: relative;
   z-index: 1;
   animation: homeFadeUp 0.8s ease both;
@@ -167,28 +169,27 @@
 
 .home-tabs__link {
   font-family: var(--home-font-display);
-  font-size: 0.95rem;
-  padding: 10px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 4px 0;
   color: var(--home-ink);
   text-decoration: none;
-  border-right: 1px solid var(--home-border);
   background: transparent;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.home-tabs__link:last-child {
-  border-right: none;
+  border: none;
+  transition: color 0.2s ease;
 }
 
 .home-tabs__link:hover,
 .home-tabs__link:focus {
-  background: var(--home-ink);
-  color: #fff;
+  color: var(--home-accent);
 }
 
 .home-tabs__link.is-disabled {
   color: var(--home-muted);
   cursor: default;
+  opacity: 0.7;
 }
 
 .home-tabs__link.is-disabled:hover,
@@ -203,7 +204,6 @@
   z-index: 1;
   animation: homeFadeUp 0.8s ease both;
   animation-delay: calc(var(--i, 2) * 120ms);
-  scroll-margin-top: 120px;
 }
 
 .home-section h2 {
@@ -271,18 +271,11 @@
   }
 
   .home-tabs {
-    border-radius: 18px;
+    gap: 16px;
   }
 
   .home-tabs__link {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--home-border);
-    text-align: center;
-  }
-
-  .home-tabs__link:last-child {
-    border-bottom: none;
+    letter-spacing: 0.14em;
   }
 }
 
