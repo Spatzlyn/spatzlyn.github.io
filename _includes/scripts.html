@@ -1,3 +1,58 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js?v={{ site.github.build_revision | default: site.time | date: '%s' }}"></script>
 
+<script>
+  (function () {
+    function getHomeOffset() {
+      var masthead = document.querySelector('.masthead');
+      var tabs = document.querySelector('.home-tabs');
+      var mastheadHeight = masthead ? masthead.offsetHeight : 0;
+      var tabsHeight = tabs ? tabs.offsetHeight : 0;
+      return mastheadHeight + tabsHeight + 24;
+    }
+
+    function scrollToHash(hash, behavior) {
+      if (!hash || hash.charAt(0) !== '#') {
+        return;
+      }
+      var target = document.querySelector(hash);
+      if (!target || !target.closest('.home-landing')) {
+        return;
+      }
+      var offset = getHomeOffset();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      if (top < 0) {
+        top = 0;
+      }
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: top, behavior: prefersReduced ? 'auto' : (behavior || 'smooth') });
+    }
+
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('.home-tabs__link[href^="#"]');
+      if (!link) {
+        return;
+      }
+      event.preventDefault();
+      event.stopPropagation();
+      var hash = link.getAttribute('href');
+      if (history && history.pushState) {
+        history.pushState(null, '', hash);
+      } else {
+        window.location.hash = hash;
+      }
+      scrollToHash(hash, 'smooth');
+    }, true);
+
+    window.addEventListener('hashchange', function () {
+      scrollToHash(window.location.hash, 'auto');
+    });
+
+    if (window.location.hash) {
+      window.requestAnimationFrame(function () {
+        scrollToHash(window.location.hash, 'auto');
+      });
+    }
+  })();
+</script>
+
 {% include analytics.html %}
