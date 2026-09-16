@@ -243,10 +243,9 @@ body {
 }
 
 .home-section__dates {
-  font-weight: 400;
-  font-size: 0.9em;
-  color: var(--home-muted);
   margin-left: 10px;
+  font: inherit;
+  color: inherit;
 }
 
 .home-section__card p,
