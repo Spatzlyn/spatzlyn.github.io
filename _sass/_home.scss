@@ -242,6 +242,13 @@ body {
   font-size: 1rem;
 }
 
+.home-section__dates {
+  font-weight: 400;
+  font-size: 0.9em;
+  color: var(--home-muted);
+  margin-left: 10px;
+}
+
 .home-section__card p,
 .home-section__card ul {
   margin: 0;
