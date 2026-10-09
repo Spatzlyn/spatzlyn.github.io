@@ -1,6 +1,6 @@
 # spatzlyn.github.io
 
-Personal site of **Yookyung Youn** — undergraduate researcher in embodied AI, multimodal learning, and trustworthy AI at Korea University.
+Personal site of **Yookyung(Clair) Youn** — undergraduate researcher at Korea University working on robot safety under partial observability.
 
 A single self-contained static page (plain HTML + CSS + vanilla JS, no framework, no build step) with a night-sky theme: canvas starfield, occasional shooting stars, and a cursor-following bird companion.
 

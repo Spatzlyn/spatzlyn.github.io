@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yookyung Youn — Embodied AI Research</title>
-<meta name="description" content="Yookyung Youn — undergraduate researcher in embodied AI, multimodal learning, and trustworthy AI at Korea University.">
+<title>Yookyung(Clair) Youn — Robot Safety Research</title>
+<meta name="description" content="Yookyung(Clair) Youn — undergraduate researcher at Korea University working on robot safety under partial observability.">
 <link rel="icon" href="images/favicon.ico" sizes="any">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/apple-touch-icon-180x180.png">
@@ -95,11 +95,9 @@
   /* interests strip at bottom of landing */
   .interests-strip{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);display:flex;align-items:baseline;gap:22px;flex-wrap:wrap;scroll-margin-top:84px}
   .istrip-label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-  .istrip-list{display:flex;flex-wrap:wrap;gap:0 18px;font-family:var(--display);font-weight:500;font-size:clamp(1rem,2.1vw,1.28rem);letter-spacing:-.01em}
-  .istrip-list .item{color:var(--text);position:relative;padding-left:18px;transition:color .2s}
-  .istrip-list .item:first-child{padding-left:0}
-  .istrip-list .item::before{content:"|";position:absolute;left:0;color:var(--line);font-weight:400}
-  .istrip-list .item:first-child::before{content:""}
+  .istrip-list{display:flex;flex-wrap:wrap;gap:4px 28px;font-family:var(--display);font-weight:500;font-size:clamp(1rem,2.1vw,1.28rem);letter-spacing:-.01em}
+  .istrip-list .item{color:var(--text);position:relative;padding-left:16px;transition:color .2s}
+  .istrip-list .item::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;margin-top:-2px;border-radius:50%;background:var(--accent);opacity:.75}
   .istrip-list .item:hover{color:var(--accent)}
 
   /* ---------- lower sections ---------- */
@@ -116,11 +114,9 @@
   .entry .who{color:var(--muted);font-size:.98rem}
   .entry .who a{color:var(--accent);border-bottom:1px solid var(--accent-soft)}
   .entry .who a:hover{border-color:var(--accent)}
+  .entry p{color:var(--text-soft);font-size:1.02rem;margin-top:10px;max-width:68ch}
   .badge{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:3px 9px;margin-bottom:8px}
 
-  .empty{border:1px dashed var(--line);border-radius:4px;padding:44px 32px;text-align:center;background:color-mix(in srgb,var(--panel) 55%,transparent)}
-  .empty .mono{margin-bottom:12px}
-  .empty p{color:var(--text-soft);max-width:44ch;margin:0 auto}
 
   footer{border-top:1px solid var(--line-soft);padding:80px 0 48px;scroll-margin-top:60px}
   .clist{display:flex;flex-wrap:wrap;gap:14px 36px;margin:24px 0 52px}
@@ -165,9 +161,9 @@
     <nav id="nav">
       <a href="#top">About</a>
       <a href="#interests">Interests</a>
+      <a href="#research">Research</a>
       <a href="#education">Education</a>
       <a href="#awards">Awards</a>
-      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -186,28 +182,66 @@
       <span class="rule"></span>
       <span class="mono">Undergraduate Researcher · Korea University</span>
     </div>
-    <h1>Yookyung <span class="glow">Youn</span></h1>
+    <h1>Yookyung<wbr>(Clair) <span class="glow">Youn</span></h1>
 
     <div class="about-grid">
       <div>
-        <img class="portrait" src="images/profile.jpg" alt="Yookyung Youn">
-        <div class="pcap">B.S. Computer Science (in Progress)<br>Korea University · 23.03~</div>
+        <img class="portrait" src="images/profile.jpg" alt="Yookyung(Clair) Youn">
+        <div class="pcap">B.S. Computer Science and Engineering<br>Korea University · 2023.03 – 2027.02 (exp.)</div>
       </div>
       <div class="h-about">
-        <p class="lead">I study how AI systems understand the world — how they perceive, reason, and interact with complex environments.</p>
-        <p>My research focuses on embodied AI, multimodal learning, and trustworthy AI. I want to build systems that learn from many senses, not just text, and that are dependable enough to genuinely help people day to day.</p>
-        <p>Pushing the boundaries of what AI can do excites me — but I believe technical progress should go hand in hand with thinking about its impact on people. I want to be a researcher who advances the field and takes responsibility for how that work shapes the world.</p>
+        <p class="lead">My research asks what a robot's internal model must keep track of for its safety checks to be trusted.</p>
+        <p>A safety check can only rule out the hazards its model still represents. In my current project on occlusion-aware planning, the planner's model quietly dropped positions a hidden person could occupy, so a check that ran correctly still approved unsafe actions. I'm now extending the question to other approximations — merged states, simplified dynamics, learned world models — and to robots that work alongside people.</p>
+        <p>Before robotics, I kept running into the same gap between what a system appears to do and what it actually does: in how language models ground answers in evidence, in a model-compression challenge, and in auditing AI hiring assessments. I now bring that habit — asking what a check actually establishes — to robot safety.</p>
       </div>
     </div>
 
     <div class="interests-strip" id="interests">
       <span class="istrip-label">Interests</span>
       <div class="istrip-list">
-        <span class="item">Embodied AI</span>
-        <span class="item">World Models</span>
-        <span class="item">Multimodal Learning</span>
-        <span class="item">AI Reasoning</span>
-        <span class="item">Trustworthy AI</span>
+        <span class="item">Robot Safety under Partial Observability</span>
+        <span class="item">Verification of Learned World Models</span>
+        <span class="item">Safe Human–Robot Interaction</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="block" id="research">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="idx">01 / Research</span>
+      <h2>Research</h2>
+    </div>
+    <div class="sbody reveal">
+      <span class="mono">Projects</span>
+      <div>
+        <div class="entry">
+          <div class="when">2026.07 — present</div>
+          <h3>Safety Evaluation in Occlusion-Aware Planning</h3>
+          <div class="who">Self-initiated independent research</div>
+          <p>Asked whether an occlusion-aware planner's apparent drop in uncertainty about a hidden person came from real evidence or from computation it had skipped. Built an independent trajectory reference with exact rational-arithmetic propagation of position–speed states and compared it against the planner's own model. A rule for avoiding repeated calculations turned out to discard feasible hidden positions, so they never reached the downstream safety check. In a separate checker experiment, restoring them cut the actions the safety check permitted from all 18 candidates to 4.</p>
+        </div>
+        <div class="entry">
+          <div class="when">2025.08 — 2026.06</div>
+          <h3>Evidence Grounding and Control in LLMs</h3>
+          <div class="who">Undergraduate Researcher · Intelligent Systems Laboratory, Korea University</div>
+          <p>Studied whether language models commit to an answer before the evidence supports it, using controlled QA experiments that separate evidence access, answer commitment, and semantic support. Attention to question-matched distractors did not indicate real support, which motivated an intervention triggered by pre-answer logits combined with a semantic support score.</p>
+        </div>
+        <div class="entry">
+          <div class="when">2025.09 — 2026.01</div>
+          <h3>Auditing Proxy Information and Fairness in AI-Based Assessment</h3>
+          <div class="who">Independent research · began in an AI Ethics course</div>
+          <p>Built a four-level audit protocol for cognitive-science-based hiring assessments, with public Human Connectome Project cognitive-task data standing in for real applicant data. The audit tests proxy recoverability, fairness across selection rates, and mitigation costs. Gender remained predictable from task scores, a rule's apparent fairness shifted with how many candidates it selected, and in some cases reducing gender disparities raised age disparities.</p>
+        </div>
+        <div class="entry">
+          <span class="badge">1st place</span>
+          <div class="when">2025.07 — 2025.08</div>
+          <h3>Vision-Language Model Compression</h3>
+          <div class="who">Individual project · Samsung SCPC 2025 AI Challenge · <a href="https://github.com/Spatzlyn/scpc2025-efficient-vqa" target="_blank" rel="noopener">code &amp; report ↗</a></div>
+          <p>Built an A-OKVQA system on my own under a 3B-parameter limit, compressing InstructBLIP-Flan-T5-XL from 4.023B to 2.987B parameters with structured pruning, knowledge distillation, and a custom LoRA implementation; the solution reached 86.59% public weighted accuracy. Answer selection stayed accurate, but the compressed model's language generation weakened — something the leaderboard score never registered.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -217,16 +251,16 @@
 <section class="block" id="education">
   <div class="wrap">
     <div class="shead reveal">
-      <span class="idx">01 / Education</span>
+      <span class="idx">02 / Education</span>
       <h2>Education</h2>
     </div>
     <div class="sbody reveal">
       <span class="mono">Track</span>
       <div>
         <div class="entry">
-          <div class="when">2023.03 — present</div>
+          <div class="when">2023.03 — 2027.02 (expected)</div>
           <h3>Korea University</h3>
-          <div class="who">B.S. in Computer Science (in progress)</div>
+          <div class="who">B.S. in Computer Science and Engineering · College of Informatics</div>
         </div>
       </div>
     </div>
@@ -237,7 +271,7 @@
 <section class="block" id="awards">
   <div class="wrap">
     <div class="shead reveal">
-      <span class="idx">02 / Recognition</span>
+      <span class="idx">03 / Recognition</span>
       <h2>Awards &amp; Honors</h2>
     </div>
     <div class="sbody reveal">
@@ -246,31 +280,19 @@
         <div class="entry">
           <span class="badge">1st place</span>
           <div class="when">2025.08</div>
-          <h3>Samsung Collegiate Programming Challenge 2025 (AI)</h3>
-          <div class="who">Samsung Electronics Co., Ltd. · <a href="https://research.samsung.com/news/Samsung-Electronics-Unveils-Winners-of-11th-Collegiate-Programming-Challenge-as-Part-of-AI-Talent-Discovery-Initiative" target="_blank" rel="noopener">announcement ↗</a></div>
+          <h3>Samsung SCPC 2025 AI Challenge</h3>
+          <div class="who">11th Samsung Collegiate Programming Challenge · organized by Samsung Research · 1st among 1,482 participants, including graduate students · <a href="https://research.samsung.com/news/Samsung-Electronics-Unveils-Winners-of-11th-Collegiate-Programming-Challenge-as-Part-of-AI-Talent-Discovery-Initiative" target="_blank" rel="noopener">announcement ↗</a></div>
         </div>
         <div class="entry">
           <div class="when">2025.05 — present</div>
-          <h3>National Science &amp; Engineering Undergraduate Scholarship</h3>
-          <div class="who">Korea Student Aid Foundation</div>
+          <h3>National Scholarship for Science and Engineering</h3>
+          <div class="who">Korea Student Aid Foundation · merit-based</div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="block" id="projects">
-  <div class="wrap">
-    <div class="shead reveal">
-      <span class="idx">03 / Work</span>
-      <h2>Projects</h2>
-    </div>
-    <div class="sbody reveal">
-      <span class="mono">Status</span>
-      <div class="empty">
-        <div class="mono">In progress</div>
-        <p>Research projects and write-ups are on the way. Check back soon, or reach out to hear what I'm currently working on.</p>
+        <div class="entry">
+          <div class="when">2025</div>
+          <h3>Gangnam-gu Scholarship</h3>
+          <div class="who">Gangnam-gu Office, Seoul</div>
+        </div>
       </div>
     </div>
   </div>
@@ -291,7 +313,7 @@
         <a href="https://orcid.org/0009-0006-1077-4554" target="_blank" rel="noopener">ORCID <span class="arrow">↗</span></a>
       </div>
       <div class="foot-meta">
-        <span class="mono">© 2026 Yookyung Youn</span>
+        <span class="mono">© 2026 Yookyung(Clair) Youn</span>
         <span class="mono">Seoul · Korea University</span>
       </div>
     </div>
